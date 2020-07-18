@@ -1,5 +1,10 @@
-import { Greeting } from 'components/Greeting';
+import RemoteGreeting from "../components/RemoteGreeting";
 
 export default function Home() {
-  return <Greeting />;
+  return (
+    <div>
+      <h1>I am the shell</h1>
+      <RemoteGreeting />
+    </div>
+  );
 }

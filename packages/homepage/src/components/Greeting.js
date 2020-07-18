@@ -1,3 +1,4 @@
+import React from "react";
 const Greeting = () => {
   return (
     <div className="max-w-3xl m-auto">
