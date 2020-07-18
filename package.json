@@ -1,0 +1,14 @@
+{
+  "name": "module-federation-next",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "private": true,
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "wsrun": "^5.2.1"
+  }
+}
