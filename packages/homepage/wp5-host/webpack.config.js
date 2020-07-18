@@ -17,14 +17,13 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
-      },
-      {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-react", "@babel/preset-env"],
+          },
         },
       },
     ],
@@ -32,15 +31,14 @@ module.exports = {
 
   plugins: [
     new ModuleFederationPlugin({
-      name: "starter",
-      library: { type: "var", name: "starter" },
+      name: "homepage",
+      library: { type: "var", name: "homepage" },
       filename: "remoteEntry.js",
       remotes: {},
-      exposes: {},
-      shared: require("./package.json").dependencies,
-    }),
-    new HtmlWebPackPlugin({
-      template: "./src/index.html",
+      exposes: {
+        "./Greeting": "../src/components/Greeting",
+      },
+      shared: require("../package.json").dependencies,
     }),
   ],
 };

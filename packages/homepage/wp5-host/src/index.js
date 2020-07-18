@@ -1,1 +1,2 @@
-import("./App");
+// Webpack needs something here
+export default () => true;
