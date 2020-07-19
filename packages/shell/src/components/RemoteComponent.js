@@ -1,12 +1,20 @@
 import React from "react";
 import useDynamicScript from "../hooks/useDynamicScript";
 
-const RemoteGreeting = () => {
-  const scope = "homepage";
-  const module = "./Greeting";
+const RemoteGreeting = ({
+  scope,
+  module,
+  fallback = <div>Loading...</div>,
+}) => {
   const { ready, failed } = useDynamicScript(
     "http://localhost:8080/remoteEntry.js"
   );
+
+  if (!scope || !module) {
+    throw new Error(
+      "You must specify scope and module to import a Remote Component"
+    );
+  }
 
   if (!ready || failed || !global) {
     return null;
@@ -25,14 +33,14 @@ const RemoteGreeting = () => {
   );
 
   const Component = React.lazy(() =>
-    global[scope].get(module).then((factory) => {
+    global[scope].get(`./${module}`).then((factory) => {
       const Module = factory();
       return Module;
     })
   );
 
   return (
-    <React.Suspense fallback={<div>Loading...</div>}>
+    <React.Suspense fallback={fallback}>
       <Component />
     </React.Suspense>
   );

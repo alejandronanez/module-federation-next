@@ -1,10 +1,10 @@
-import RemoteGreeting from "../components/RemoteGreeting";
+import RemoteComponent from "../components/RemoteComponent";
 
 export default function Home() {
   return (
     <div>
       <h1>I am the shell</h1>
-      <RemoteGreeting />
+      <RemoteComponent scope="homepage" module="Greeting" />
     </div>
   );
 }
