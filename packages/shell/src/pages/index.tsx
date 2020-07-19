@@ -1,10 +1,15 @@
-import RemoteComponent from "../components/RemoteComponent";
+import RemoteComponent from '../components/RemoteComponent';
+import Shell from '../components/Shell';
 
 export default function Home() {
   return (
     <div>
-      <h1>I am the shell</h1>
-      <RemoteComponent scope="homepage" module="Greeting" />
+      <Shell>
+        <p className="text-xl">
+          I am just a shell application - I should not contain anything. I'm
+          just a 🦪
+        </p>
+      </Shell>
     </div>
   );
 }
