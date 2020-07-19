@@ -8,7 +8,8 @@
   ],
   "private": true,
   "scripts": {
-    "dev": "concurrently \"wsrun --parallel dev\" \"yarn webpack-dev\"",
+    "dev": "concurrently \"yarn next\" \"yarn webpack-dev\"",
+    "next": "wsrun --parallel dev",
     "postinstall": "yarn install-sidecar",
     "install-sidecar": "yarn install-sidecar:shell && yarn install-sidecar:homepage && yarn install-sidecar:jobs",
     "install-sidecar:shell": "yarn --cwd \"packages/shell/wp5-host\" install",
