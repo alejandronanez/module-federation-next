@@ -56,7 +56,7 @@ If you want to run specific commands for each application, feel free to take a l
 
 You can visit the applications in the following addresses:
 
-| Application | Address               |
+| Application | URL Address           |
 | ----------- | --------------------- |
 | Shell       | http://localhost:3000 |
 | Homepage    | http://localhost:3001 |
