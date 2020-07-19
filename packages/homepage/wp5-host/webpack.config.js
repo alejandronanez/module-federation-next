@@ -34,7 +34,10 @@ module.exports = {
       name: 'homepage',
       library: { type: 'var', name: 'homepage' },
       filename: 'remoteEntry.js',
-      remotes: {},
+      remotes: {
+        homepage: 'homepage',
+        shell: 'shell',
+      },
       exposes: {
         './Greeting': '../src/components/Greeting',
       },

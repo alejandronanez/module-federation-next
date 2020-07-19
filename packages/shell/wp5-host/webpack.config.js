@@ -31,10 +31,13 @@ module.exports = {
 
   plugins: [
     new ModuleFederationPlugin({
-      name: 'homepage',
-      library: { type: 'var', name: 'homepage' },
+      name: 'shell',
+      library: { type: 'var', name: 'shell' },
       filename: 'remoteEntry.js',
-      remotes: {},
+      remotes: {
+        shell: 'shell',
+        homepage: 'homepage',
+      },
       exposes: {
         './Shell': '../src/components/Shell',
       },
