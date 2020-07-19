@@ -43,5 +43,8 @@ module.exports = {
       },
       shared: require('../package.json').dependencies,
     }),
+    new HtmlWebPackPlugin({
+      template: './src/index.html',
+    }),
   ],
 };
