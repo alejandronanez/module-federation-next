@@ -61,3 +61,10 @@ You can visit the applications in the following addresses:
 | Shell       | http://localhost:3000 |
 | Homepage    | http://localhost:3001 |
 | Jobs        | http://localhost:3002 |
+
+## What's pending / up for grabs
+
+- [ ] Being able to consume Typescript modules
+- [ ] Add some routing
+- [ ] Centralize all the apps in Shell
+- [ ] Spin up a component library
