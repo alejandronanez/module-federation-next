@@ -6,7 +6,7 @@ const RemoteGreeting = ({
   scope,
   module,
   fallback = <div>Loading...</div>,
-  children,
+  children = null,
 }) => {
   const { ready, failed } = useDynamicScript(remote);
 
