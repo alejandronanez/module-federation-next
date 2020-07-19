@@ -7,6 +7,9 @@
     "packages/*"
   ],
   "private": true,
+  "scripts": {
+    "dev": "concurrently \"wsrun --parallel dev\""
+  },
   "devDependencies": {
     "concurrently": "^5.2.0",
     "wsrun": "^5.2.1"
