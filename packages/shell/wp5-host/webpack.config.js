@@ -36,7 +36,7 @@ module.exports = {
       filename: 'remoteEntry.js',
       remotes: {},
       exposes: {
-        './Greeting': '../src/components/Greeting',
+        './Shell': '../src/components/Shell',
       },
       shared: require('../package.json').dependencies,
     }),
