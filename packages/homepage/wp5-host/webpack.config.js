@@ -7,7 +7,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['.jsx', '.js', '.json'],
+    extensions: ['.ts', '.tsx', '.jsx', '.js', '.json'],
   },
 
   devServer: {
@@ -17,14 +17,35 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(ts|tsx)$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: [
+                '@babel/preset-react',
+                '@babel/preset-typescript',
+                '@babel/preset-env',
+              ],
+            },
+          },
+          // {
+          //   loader: 'ts-loader',
+          // },
+        ],
+      },
+      {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-react', '@babel/preset-env'],
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-react', '@babel/preset-env'],
+            },
           },
-        },
+        ],
       },
     ],
   },
@@ -38,7 +59,9 @@ module.exports = {
         homepage: 'homepage',
         shell: 'shell',
       },
-      exposes: {},
+      exposes: {
+        './Homepage': '../src/pages/index.tsx',
+      },
       shared: require('../package.json').dependencies,
     }),
     new HtmlWebPackPlugin({

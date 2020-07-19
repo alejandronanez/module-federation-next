@@ -5,9 +5,9 @@ function MyApp({ Component, pageProps }) {
   return (
     <div>
       <Shell>
-        <p className="text-xl">
+        <div className="text-xl">
           <Component {...pageProps} />
-        </p>
+        </div>
       </Shell>
     </div>
   );
