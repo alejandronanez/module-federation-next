@@ -1,13 +1,13 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
-const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
+const HtmlWebPackPlugin = require('html-webpack-plugin');
+const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 
 module.exports = {
   output: {
-    publicPath: "http://localhost:8000/",
+    publicPath: 'http://localhost:8000/',
   },
 
   resolve: {
-    extensions: [".jsx", ".js", ".json"],
+    extensions: ['.jsx', '.js', '.json'],
   },
 
   devServer: {
@@ -20,9 +20,9 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
           options: {
-            presets: ["@babel/preset-react", "@babel/preset-env"],
+            presets: ['@babel/preset-react', '@babel/preset-env'],
           },
         },
       },
@@ -31,14 +31,14 @@ module.exports = {
 
   plugins: [
     new ModuleFederationPlugin({
-      name: "homepage",
-      library: { type: "var", name: "homepage" },
-      filename: "remoteEntry.js",
+      name: 'homepage',
+      library: { type: 'var', name: 'homepage' },
+      filename: 'remoteEntry.js',
       remotes: {},
       exposes: {
-        "./Greeting": "../src/components/Greeting",
+        './Greeting': '../src/components/Greeting',
       },
-      shared: require("../package.json").dependencies,
+      shared: require('../package.json').dependencies,
     }),
   ],
 };
