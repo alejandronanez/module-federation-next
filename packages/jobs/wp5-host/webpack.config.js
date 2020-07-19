@@ -37,9 +37,7 @@ module.exports = {
       remotes: {
         shell: 'shell',
       },
-      exposes: {
-        './Greeting': '../src/components/Greeting',
-      },
+      exposes: {},
       shared: require('../package.json').dependencies,
     }),
     new HtmlWebPackPlugin({
