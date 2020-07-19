@@ -64,7 +64,7 @@ You can visit the applications in the following addresses:
 
 ## What's pending / up for grabs
 
-- [ ] Being able to consume Typescript modules
+- [x] ~Being able to consume Typescript modules~ Done in https://github.com/alejandronanez/module-federation-next/pull/2
 - [ ] Add some routing
 - [ ] Centralize all the apps in Shell
 - [ ] Spin up a component library
