@@ -1,5 +1,17 @@
-import Greeting from "components/Greeting";
+import Banner from '../components/Banner';
+import Paragraph from '../components/Paragraph';
 
 export default function Home() {
-  return <Greeting />;
+  return (
+    <div>
+      <Banner />
+      <Paragraph />
+      <br />
+      <Paragraph />
+      <br />
+      <Paragraph />
+      <br />
+      <Paragraph />
+    </div>
+  );
 }
