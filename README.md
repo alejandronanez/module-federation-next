@@ -65,6 +65,6 @@ You can visit the applications in the following addresses:
 ## What's pending / up for grabs
 
 - [x] ~[Being able to consume Typescript modules](https://github.com/alejandronanez/module-federation-next/pull/2)~
-- [ ] Add some routing
+- [x] ~[Add some basci routing](https://github.com/alejandronanez/module-federation-next/commit/f91001369167aaa4069e80b9931f9e4550a1b2a8)~ 
 - [ ] Centralize all the apps in Shell
 - [ ] Spin up a component library
