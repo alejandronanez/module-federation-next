@@ -1,53 +1,20 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
+const webpackSharedConfig = require('../../utils/webpack-shared-config');
 
 module.exports = {
   output: {
     publicPath: 'http://localhost:8000/',
   },
 
-  resolve: {
-    extensions: ['.jsx', '.js', '.ts', '.tsx', '.json'],
-  },
+  resolve: webpackSharedConfig.resolve,
 
   devServer: {
     port: 8000,
   },
 
   module: {
-    rules: [
-      {
-        test: /\.(ts|tsx)$/,
-        exclude: /node_modules/,
-        use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              presets: [
-                '@babel/preset-react',
-                '@babel/preset-typescript',
-                '@babel/preset-env',
-              ],
-            },
-          },
-          // {
-          //   loader: 'ts-loader',
-          // },
-        ],
-      },
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              presets: ['@babel/preset-react', '@babel/preset-env'],
-            },
-          },
-        ],
-      },
-    ],
+    rules: webpackSharedConfig.module.rules,
   },
 
   plugins: [
