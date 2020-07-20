@@ -42,7 +42,7 @@ const useDynamicScript = (url) => {
   };
 };
 
-const RemoteGreeting = ({
+const RemoteComponent = ({
   remote,
   scope,
   module,
@@ -87,4 +87,4 @@ const RemoteGreeting = ({
   );
 };
 
-export default RemoteGreeting;
+export default RemoteComponent;
