@@ -1,6 +1,7 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 const webpackSharedConfig = require('../../utils/webpack-shared-config');
+const { dependencies } = require('../package.json');
 
 module.exports = {
   output: {
@@ -26,7 +27,9 @@ module.exports = {
         shell: 'shell',
       },
       exposes: {},
-      shared: require('../package.json').dependencies,
+      shared: {
+        ...dependencies,
+      },
     }),
     new HtmlWebPackPlugin({
       template: './src/index.html',
