@@ -8,6 +8,16 @@ const Navigation = ({ children }) => {
           Federated Application / Navigation
         </strong>
       </div>
+      <div className="m-auto max-w-5xl">
+        <ul>
+          <li>
+            <a href="http://localhost:3001">Homepage</a>
+          </li>
+          <li>
+            <a href="http://localhost:3002">Jobs</a>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };
