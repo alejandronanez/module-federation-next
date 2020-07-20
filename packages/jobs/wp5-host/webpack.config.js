@@ -25,6 +25,8 @@ module.exports = {
       filename: 'remoteEntry.js',
       remotes: {
         shell: 'shell',
+        homepage: 'homepage',
+        jobs: 'jobs',
       },
       exposes: {},
       shared: {

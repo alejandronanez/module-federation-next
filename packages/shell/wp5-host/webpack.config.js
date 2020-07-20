@@ -26,6 +26,7 @@ module.exports = {
       remotes: {
         shell: 'shell',
         homepage: 'homepage',
+        jobs: 'jobs',
       },
       exposes: {
         './Shell': '../src/components/Shell',

@@ -24,8 +24,9 @@ module.exports = {
       library: { type: 'var', name: 'homepage' },
       filename: 'remoteEntry.js',
       remotes: {
-        homepage: 'homepage',
         shell: 'shell',
+        homepage: 'homepage',
+        jobs: 'jobs',
       },
       exposes: {
         './Homepage': '../src/pages/index.tsx',
