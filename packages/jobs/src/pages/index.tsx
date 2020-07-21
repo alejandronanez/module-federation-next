@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div>
       <Link href="/frontend-engineer">
-        <a>FE</a>
+        <a className="bg-blue-200 p-2">Go to Frontend Engineering</a>
       </Link>
       <Banner />
       <MostPopularJob />
