@@ -28,7 +28,9 @@ module.exports = {
         homepage: 'homepage',
         jobs: 'jobs',
       },
-      exposes: {},
+      exposes: {
+        './MostPopularJobs': '../src/components/MostPopularJob',
+      },
       shared: {
         ...dependencies,
       },

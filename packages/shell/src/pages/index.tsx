@@ -4,6 +4,13 @@ import RemoteComponent from '../components/RemoteComponent';
 export default function Home() {
   return (
     <div>
+      {/* @ts-ignore */}
+      <RemoteComponent
+        remote="http://localhost:8002/remoteEntry.js"
+        module="MostPopularJobs"
+        scope="jobs"
+      />
+      {/* @ts-ignore */}
       <RemoteComponent
         remote="http://localhost:8001/remoteEntry.js"
         module="Homepage"
