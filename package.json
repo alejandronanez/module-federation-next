@@ -12,13 +12,13 @@
     "next": "wsrun --parallel dev",
     "postinstall": "yarn install-sidecar",
     "install-sidecar": "yarn install-sidecar:shell && yarn install-sidecar:homepage && yarn install-sidecar:jobs",
-    "install-sidecar:shell": "yarn --cwd \"packages/shell/wp5-host\" install",
-    "install-sidecar:homepage": "yarn --cwd \"packages/homepage/wp5-host\" install",
-    "install-sidecar:jobs": "yarn --cwd \"packages/jobs/wp5-host\" install",
+    "install-sidecar:shell": "yarn --cwd \"packages/shell/sidecar\" install",
+    "install-sidecar:homepage": "yarn --cwd \"packages/homepage/sidecar\" install",
+    "install-sidecar:jobs": "yarn --cwd \"packages/jobs/sidecar\" install",
     "webpack-dev": "concurrently \"yarn webpack-dev:shell\" \"yarn webpack-dev:homepage\" \"yarn webpack-dev:jobs\"",
-    "webpack-dev:shell": "yarn --cwd \"packages/shell/wp5-host\" start",
-    "webpack-dev:homepage": "yarn --cwd \"packages/homepage/wp5-host\" start",
-    "webpack-dev:jobs": "yarn --cwd \"packages/jobs/wp5-host\" start"
+    "webpack-dev:shell": "yarn --cwd \"packages/shell/sidecar\" start",
+    "webpack-dev:homepage": "yarn --cwd \"packages/homepage/sidecar\" start",
+    "webpack-dev:jobs": "yarn --cwd \"packages/jobs/sidecar\" start"
   },
   "devDependencies": {
     "concurrently": "^5.2.0",
