@@ -1,14 +1,13 @@
 import Banner from '../components/Banner';
 import MostPopularJob from '../components/MostPopularJob';
-import Link from 'next/link';
 
-export default function Home() {
+export default function FrontendEngineer() {
   return (
     <div>
-      <Link href="/frontend-engineer">
-        <a>FE</a>
-      </Link>
       <Banner />
+      <MostPopularJob />
+      <MostPopularJob />
+      <MostPopularJob />
       <MostPopularJob />
     </div>
   );

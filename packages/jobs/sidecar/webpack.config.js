@@ -1,10 +1,11 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 const webpackSharedConfig = require('../../utils/webpack-shared-config');
+const { dependencies } = require('../package.json');
 
 module.exports = {
   output: {
-    publicPath: 'http://localhost:8001/',
+    publicPath: 'http://localhost:8002/',
   },
 
   resolve: webpackSharedConfig.resolve,
@@ -14,22 +15,23 @@ module.exports = {
   },
 
   devServer: {
-    port: 8001,
+    port: 8002,
   },
 
   plugins: [
     new ModuleFederationPlugin({
-      name: 'homepage',
-      library: { type: 'var', name: 'homepage' },
+      name: 'jobs',
+      library: { type: 'var', name: 'jobs' },
       filename: 'remoteEntry.js',
       remotes: {
-        homepage: 'homepage',
         shell: 'shell',
+        homepage: 'homepage',
+        jobs: 'jobs',
       },
-      exposes: {
-        './Homepage': '../src/pages/index.tsx',
+      exposes: {},
+      shared: {
+        ...dependencies,
       },
-      shared: require('../package.json').dependencies,
     }),
     new HtmlWebPackPlugin({
       template: './src/index.html',
