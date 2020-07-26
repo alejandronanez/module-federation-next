@@ -21,12 +21,10 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin({
       name: 'jobs',
-      library: { type: 'var', name: 'jobs' },
       filename: 'remoteEntry.js',
       remotes: {
         shell: 'shell',
         homepage: 'homepage',
-        jobs: 'jobs',
       },
       exposes: {},
       shared: {
