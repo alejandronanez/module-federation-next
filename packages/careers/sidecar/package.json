@@ -1,9 +1,10 @@
 {
-  "name": "wp5-homepage-host",
+  "name": "wp5-careers-host",
   "version": "1.0.0",
   "scripts": {
     "build": "webpack --mode production",
     "build:dev": "webpack --mode development",
+    "build:production": "PUBLIC_PATH=https://careers-mf.alejandronanez.vercel.app/mf/ webpack --mode development",
     "start": "webpack-dev-server --mode development",
     "start:live": "webpack-dev-server --mode development --liveReload",
     "serve": "servor dist index.html 8003"

@@ -3,7 +3,7 @@ import Shell from '../components/Shell';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div>
+    <div className="font-sans">
       <Shell>
         <div className="text-xl">
           <Component {...pageProps} />

@@ -56,6 +56,8 @@ If you want to run specific commands for each application, feel free to take a l
 
 You can visit the applications in the following urls:
 
+### In Development
+
 | Application | URL Address           |
 | ----------- | --------------------- |
 | Shell       | http://localhost:3000 |
@@ -65,12 +67,30 @@ You can visit the applications in the following urls:
 
 For local development, the webpack remote entries will be loading in these urls:
 
-| Application | URL Address           |
-| ----------- | --------------------- |
-| Shell       | http://localhost:8000 |
-| Homepage    | http://localhost:8001 |
-| Jobs        | http://localhost:8002 |
-| Careers     | http://localhost:8003 |
+| Application | URL Address                          |
+| ----------- | ------------------------------------ |
+| Shell       | http://localhost:8000/remoteEntry.js |
+| Homepage    | http://localhost:8001/remoteEntry.js |
+| Jobs        | http://localhost:8002/remoteEntry.js |
+| Careers     | http://localhost:8003/remoteEntry.js |
+
+### In Prod
+
+| Application | URL Address                                   |
+| ----------- | --------------------------------------------- |
+| Shell       | https://shell-mf.alejandronanez.vercel.app    |
+| Homepage    | https://homepage-mf.alejandronanez.vercel.app |
+| Jobs        | https://jobs-mf.alejandronanez.vercel.app     |
+| Careers     | https://careers-mf.alejandronanez.vercel.app  |
+
+For local development, the webpack remote entries will be loading in these urls:
+
+| Application | URL Address                                                     |
+| ----------- | --------------------------------------------------------------- |
+| Shell       | https://shell-mf.alejandronanez.vercel.app/mf/remoteEntry.js    |
+| Homepage    | https://homepage-mf.alejandronanez.vercel.app/mf/remoteEntry.js |
+| Jobs        | https://jobs-mf.alejandronanez.vercel.app/mf/remoteEntry.js     |
+| Careers     | https://careers-mf.alejandronanez.vercel.app/mf/remoteEntry.js  |
 
 ## What's pending / up for grabs
 

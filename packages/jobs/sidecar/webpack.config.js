@@ -1,17 +1,50 @@
+const path = require('path');
+const webpack = require('webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
-const webpackSharedConfig = require('../../utils/webpack-shared-config');
 const { dependencies } = require('../package.json');
+
+const PUBLIC_PATH = process.env.PUBLIC_PATH || 'http://localhost:8003/';
 
 module.exports = {
   output: {
-    publicPath: 'http://localhost:8002/',
+    publicPath: PUBLIC_PATH,
+    path: path.resolve(__dirname, '../public/mf/'),
   },
 
-  resolve: webpackSharedConfig.resolve,
+  resolve: { extensions: ['.jsx', '.js', '.ts', '.tsx', '.json'] },
 
   module: {
-    rules: webpackSharedConfig.module.rules,
+    rules: [
+      {
+        test: /\.(ts|tsx)$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: [
+                '@babel/preset-react',
+                '@babel/preset-typescript',
+                '@babel/preset-env',
+              ],
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-react', '@babel/preset-env'],
+            },
+          },
+        ],
+      },
+    ],
   },
 
   devServer: {
@@ -38,6 +71,9 @@ module.exports = {
     }),
     new HtmlWebPackPlugin({
       template: './src/index.html',
+    }),
+    new webpack.DefinePlugin({
+      'process.env.PUBLIC_PATH': JSON.stringify(PUBLIC_PATH),
     }),
   ],
 };
