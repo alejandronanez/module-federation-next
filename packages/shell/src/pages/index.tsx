@@ -1,17 +1,12 @@
 import React from 'react';
-import RemoteComponent from '../components/RemoteComponent';
 
 export default function Home() {
   return (
     <div>
-      <RemoteComponent
-        remote="http://localhost:8001/remoteEntry.js"
-        module="Homepage"
-        scope="homepage"
-      />
-      <p className="text-xl">
+      <p className="text-4xl p-3 border-dashed border-4">
         I am just a shell application - I should not contain anything. I'm just
-        a 🦪
+        an empty shell. You can think of me as a global sidebar, or a universal
+        navigation
       </p>
     </div>
   );

@@ -3,27 +3,15 @@ import React from 'react';
 const Navigation = ({ children }) => {
   return (
     <div className="bg-gray-200 py-3 px-2">
-      <div className="m-auto max-w-5xl">
-        <strong className="text-gray-700 text-xl">
-          Federated Application / Navigation
-        </strong>
-      </div>
-      <div className="m-auto max-w-5xl">
-        <ul className="flex mt-2">
-          <li className="mr-3">
-            <a
-              className="bg-gray-700 text-gray-200 rounded-md font-bold p-3"
-              href="http://localhost:3001"
-            >
-              Homepage
-            </a>
-          </li>
+      <div className="max-w-5xl items-center m-auto flex justify-between content-center">
+        <strong className="text-gray-700 text-xl">Global Navigation</strong>
+        <ul className="flex">
           <li>
             <a
-              className="bg-gray-700 text-gray-200 rounded-md font-bold p-3"
+              className="bg-teal-500 inline-block text-teal-100 rounded-md font-bold p-3"
               href="http://localhost:3002"
             >
-              Jobs
+              View jobs
             </a>
           </li>
         </ul>
