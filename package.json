@@ -11,14 +11,16 @@
     "dev": "concurrently \"yarn next\" \"yarn webpack-dev\"",
     "next": "wsrun --parallel dev",
     "postinstall": "yarn install-sidecar",
-    "install-sidecar": "yarn install-sidecar:shell && yarn install-sidecar:homepage && yarn install-sidecar:jobs",
+    "install-sidecar": "yarn install-sidecar:shell && yarn install-sidecar:homepage && yarn install-sidecar:jobs && yarn install-sidecar:careers",
     "install-sidecar:shell": "yarn --cwd \"packages/shell/sidecar\" install",
     "install-sidecar:homepage": "yarn --cwd \"packages/homepage/sidecar\" install",
     "install-sidecar:jobs": "yarn --cwd \"packages/jobs/sidecar\" install",
-    "webpack-dev": "concurrently \"yarn webpack-dev:shell\" \"yarn webpack-dev:homepage\" \"yarn webpack-dev:jobs\"",
+    "install-sidecar:careers": "yarn --cwd \"packages/careers/sidecar\" install",
+    "webpack-dev": "concurrently \"yarn webpack-dev:shell\" \"yarn webpack-dev:homepage\" \"yarn webpack-dev:jobs\" \"yarn webpack-dev:careers\"",
     "webpack-dev:shell": "yarn --cwd \"packages/shell/sidecar\" start",
     "webpack-dev:homepage": "yarn --cwd \"packages/homepage/sidecar\" start",
-    "webpack-dev:jobs": "yarn --cwd \"packages/jobs/sidecar\" start"
+    "webpack-dev:jobs": "yarn --cwd \"packages/jobs/sidecar\" start",
+    "webpack-dev:careers": "yarn --cwd \"packages/careers/sidecar\" start"
   },
   "devDependencies": {
     "concurrently": "^5.2.0",

@@ -6,7 +6,7 @@
     "build:dev": "webpack --mode development",
     "start": "webpack-dev-server --mode development",
     "start:live": "webpack-dev-server --mode development --liveReload",
-    "serve": "servor dist index.html 8002"
+    "serve": "servor dist index.html 8003"
   },
   "license": "MIT",
   "author": {
