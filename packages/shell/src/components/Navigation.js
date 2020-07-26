@@ -9,7 +9,7 @@ const Navigation = ({ children }) => {
           <li>
             <a
               className="bg-teal-500 inline-block text-teal-100 rounded-md font-bold p-3"
-              href="http://localhost:3002"
+              href="http://localhost:3001"
             >
               Back to homepage 🏠
             </a>
