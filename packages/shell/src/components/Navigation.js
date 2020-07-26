@@ -19,7 +19,15 @@ const Navigation = ({ children }) => {
               className="bg-teal-500 inline-block text-teal-100 rounded-md font-bold p-3"
               href="http://localhost:3002"
             >
-              View jobs 👩‍🚀
+              Jobs board 👩‍🚀
+            </a>
+          </li>
+          <li>
+            <a
+              className="bg-teal-500 inline-block text-teal-100 rounded-md font-bold p-3"
+              href="http://localhost:3003"
+            >
+              Careers 🙌
             </a>
           </li>
         </ul>
