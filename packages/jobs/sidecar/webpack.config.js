@@ -26,9 +26,14 @@ module.exports = {
         shell: 'shell',
         homepage: 'homepage',
       },
-      exposes: {},
+      exposes: {
+        './FeaturedJob': '../src/components/FeaturedJob',
+      },
       shared: {
         ...dependencies,
+        react: {
+          singleton: true,
+        },
       },
     }),
     new HtmlWebPackPlugin({

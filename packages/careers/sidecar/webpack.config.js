@@ -31,6 +31,9 @@ module.exports = {
       },
       shared: {
         ...dependencies,
+        react: {
+          singleton: true,
+        },
       },
     }),
     new HtmlWebPackPlugin({

@@ -1,6 +1,7 @@
 import React from 'react';
 
 const FeaturedJob = () => {
+  const [count, setCount] = React.useState(0);
   return (
     <div className="flex bg-yellow-200 justify-center border-dotted border-4 p-6 text-yellow-900">
       <div>
@@ -18,6 +19,10 @@ const FeaturedJob = () => {
         >
           Apply here
         </a>
+        <br />
+        {/* <button onClick={() => setCount(count + 1)}>
+          Increase Count: {count}
+        </button> */}
       </div>
     </div>
   );

@@ -47,7 +47,7 @@ const RemoteComponent = ({
   scope,
   module,
   fallback = <div>Loading...</div>,
-  children,
+  ...props
 }) => {
   const { ready, failed } = useDynamicScript(remote);
 
@@ -65,8 +65,11 @@ const RemoteComponent = ({
     Object.assign(
       {
         react: {
-          get: () => Promise.resolve(() => require('react')),
-          loaded: true,
+          [require('react').version]: {
+            get: () => Promise.resolve(() => require('react')),
+            loaded: true,
+            from: scope,
+          },
         },
       },
       global.__webpack_require__ ? global.__webpack_require__.o : {},
@@ -82,7 +85,7 @@ const RemoteComponent = ({
 
   return (
     <React.Suspense fallback={fallback}>
-      <Component>{children}</Component>
+      <Component {...props} />
     </React.Suspense>
   );
 };
