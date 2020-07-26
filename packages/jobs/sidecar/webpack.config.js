@@ -9,6 +9,7 @@ const PUBLIC_PATH = process.env.PUBLIC_PATH || 'http://localhost:8003/';
 module.exports = {
   output: {
     publicPath: PUBLIC_PATH,
+    path: path.resolve(__dirname, '../public/mf/'),
   },
 
   resolve: { extensions: ['.jsx', '.js', '.ts', '.tsx', '.json'] },

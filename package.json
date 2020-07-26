@@ -20,7 +20,12 @@
     "webpack-dev:shell": "yarn --cwd \"packages/shell/sidecar\" start",
     "webpack-dev:homepage": "yarn --cwd \"packages/homepage/sidecar\" start",
     "webpack-dev:jobs": "yarn --cwd \"packages/jobs/sidecar\" start",
-    "webpack-dev:careers": "yarn --cwd \"packages/careers/sidecar\" start"
+    "webpack-dev:careers": "yarn --cwd \"packages/careers/sidecar\" start",
+    "deploy:all": "concurrently \"yarn deploy:shell\" \"yarn deploy:homepage\" \"yarn deploy:jobs\" \"yarn deploy:careers\"",
+    "deploy:shell": "yarn --cwd \"packages/shell\" deploy:prod",
+    "deploy:homepage": "yarn --cwd \"packages/homepage\" deploy:prod",
+    "deploy:jobs": "yarn --cwd \"packages/jobs\" deploy:prod",
+    "deploy:careers": "yarn --cwd \"packages/careers\" deploy:prod"
   },
   "devDependencies": {
     "concurrently": "^5.2.0",

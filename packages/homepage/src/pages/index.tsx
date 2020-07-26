@@ -13,7 +13,7 @@ export default function Home() {
         message="Featured homepage image"
       />
       {/* <RemoteComponent
-        remote="http://localhost:8002/remoteEntry.js"
+        remote={process.env.NEXT_PUBLIC_JOBS_REMOTE}
         scope="jobs"
         module="FeaturedJob"
       /> */}

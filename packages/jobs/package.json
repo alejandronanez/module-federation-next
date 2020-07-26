@@ -7,7 +7,8 @@
     "build": "next build && yarn build:mf",
     "build:mf": "yarn --cwd \"sidecar\" install && yarn --cwd \"sidecar\" build:production",
     "start": "next start",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "deploy:prod": "vercel --prod"
   },
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^2.3.0",
