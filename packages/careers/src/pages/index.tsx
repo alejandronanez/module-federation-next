@@ -1,23 +1,20 @@
 import React from 'react';
 import Banner from '../components/Banner';
 import Paragraph from '../components/Paragraph';
-import Hero from '../components/Hero';
+import Perks from '../components/Perks';
 
 export default function Home() {
   return (
     <div>
       <Banner />
-      <Hero
-        src="https://picsum.photos/id/1/1200/600"
-        message="Featured homepage image"
-      />
+      <Paragraph />
+      <Paragraph />
+      <h2 className="text-center text-5xl font-black">Your future here</h2>
+      <Paragraph />
+      <h2 className="text-center text-5xl font-black">Our culture</h2>
       <Paragraph />
       <br />
-      <Paragraph />
-      <br />
-      <Paragraph />
-      <br />
-      <Paragraph />
+      <Perks />
     </div>
   );
 }
