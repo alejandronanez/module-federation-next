@@ -4,7 +4,7 @@ import RemoteComponent from '../components/RemoteComponent';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div>
+    <div className="font-sans">
       <RemoteComponent
         remote="http://localhost:8000/remoteEntry.js"
         scope="shell"

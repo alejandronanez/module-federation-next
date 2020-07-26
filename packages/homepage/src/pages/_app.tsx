@@ -4,9 +4,9 @@ import RemoteComponent from '../components/RemoteComponent';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div>
+    <div className="font-sans">
       <RemoteComponent
-        remote="http://localhost:8000/remoteEntry.js"
+        remote={`https://shell-mf.alejandronanez.vercel.app/mf/remoteEntry.js`}
         scope="shell"
         module="Shell"
       >
