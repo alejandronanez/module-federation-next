@@ -21,11 +21,9 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin({
       name: 'homepage',
-      library: { type: 'var', name: 'homepage' },
       filename: 'remoteEntry.js',
       remotes: {
         shell: 'shell',
-        homepage: 'homepage',
         jobs: 'jobs',
       },
       exposes: {
@@ -33,6 +31,9 @@ module.exports = {
       },
       shared: {
         ...dependencies,
+        react: {
+          singleton: true,
+        },
       },
     }),
     new HtmlWebPackPlugin({

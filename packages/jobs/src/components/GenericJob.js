@@ -1,12 +1,10 @@
 import React from 'react';
 
-const MostPopularJob = () => {
+const GenericJob = ({ title }) => {
   return (
-    <div className="flex justify-center border-dotted border-2 p-6">
+    <div className="flex bg-gray-100 justify-center border-dotted border-4 p-6 text-gray-900">
       <div>
-        <h2 className="underline font-bold text-xl mb-2">
-          This is a really important job
-        </h2>
+        <h2 className="underline font-bold text-xl mb-2">{title}</h2>
         <p>
           Commodo adipisicing id pariatur est eu. Labore eiusmod mollit elit
           laborum. Officia in proident tempor pariatur esse sit duis deserunt
@@ -15,7 +13,7 @@ const MostPopularJob = () => {
           veniam duis ut ipsum cillum veniam veniam ullamco fugiat.
         </p>
         <a
-          className="bg-pink-600 text-pink-100 py-2 px-4 rounded-lg text-lg inline-block"
+          className="bg-gray-700 text-gray-100 py-2 px-4 mt-2 rounded-lg text-lg inline-block"
           href="https://zapier.com/jobs"
         >
           Apply here
@@ -25,4 +23,4 @@ const MostPopularJob = () => {
   );
 };
 
-export default MostPopularJob;
+export default GenericJob;

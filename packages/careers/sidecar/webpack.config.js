@@ -5,7 +5,7 @@ const { dependencies } = require('../package.json');
 
 module.exports = {
   output: {
-    publicPath: 'http://localhost:8002/',
+    publicPath: 'http://localhost:8003/',
   },
 
   resolve: webpackSharedConfig.resolve,
@@ -15,19 +15,19 @@ module.exports = {
   },
 
   devServer: {
-    port: 8002,
+    port: 8003,
   },
 
   plugins: [
     new ModuleFederationPlugin({
-      name: 'jobs',
+      name: 'homepage',
       filename: 'remoteEntry.js',
       remotes: {
         shell: 'shell',
-        homepage: 'homepage',
+        jobs: 'jobs',
       },
       exposes: {
-        './FeaturedJob': '../src/components/FeaturedJob',
+        './Homepage': '../src/pages/index.tsx',
       },
       shared: {
         ...dependencies,

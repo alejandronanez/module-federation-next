@@ -6,7 +6,7 @@
     "build:dev": "webpack --mode development",
     "start": "webpack-dev-server --mode development",
     "start:live": "webpack-dev-server --mode development --liveReload",
-    "serve": "servor dist index.html 8001"
+    "serve": "servor dist index.html 8002"
   },
   "license": "MIT",
   "author": {
@@ -21,7 +21,7 @@
     "html-webpack-plugin": "^4.3.0",
     "servor": "^4.0.2",
     "typescript": "^3.9.7",
-    "webpack": "5.0.0-beta.20",
+    "webpack": "5.0.0-beta.22",
     "webpack-cli": "3.3.11",
     "webpack-dev-server": "3.11.0"
   },

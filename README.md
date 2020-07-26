@@ -52,19 +52,29 @@ yarn dev # Run all Next.js applications in development mode and the webpack side
 
 If you want to run specific commands for each application, feel free to take a look at the main `package.json` in each one of the folders mentioned above.
 
-## Application addresses
+## Application URL
 
-You can visit the applications in the following addresses:
+You can visit the applications in the following urls:
 
 | Application | URL Address           |
 | ----------- | --------------------- |
 | Shell       | http://localhost:3000 |
 | Homepage    | http://localhost:3001 |
 | Jobs        | http://localhost:3002 |
+| Careers     | http://localhost:3003 |
+
+For local development, the webpack remote entries will be loading in these urls:
+
+| Application | URL Address           |
+| ----------- | --------------------- |
+| Shell       | http://localhost:8000 |
+| Homepage    | http://localhost:8001 |
+| Jobs        | http://localhost:8002 |
+| Careers     | http://localhost:8003 |
 
 ## What's pending / up for grabs
 
 - [x] ~[Being able to consume Typescript modules](https://github.com/alejandronanez/module-federation-next/pull/2)~
-- [x] ~[Add some basci routing](https://github.com/alejandronanez/module-federation-next/commit/f91001369167aaa4069e80b9931f9e4550a1b2a8)~ 
+- [x] ~[Add some basci routing](https://github.com/alejandronanez/module-federation-next/commit/f91001369167aaa4069e80b9931f9e4550a1b2a8)~
 - [ ] Centralize all the apps in Shell
 - [ ] Spin up a component library
