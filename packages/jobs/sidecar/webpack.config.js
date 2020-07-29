@@ -4,7 +4,7 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 const { dependencies } = require('../package.json');
 
-const PUBLIC_PATH = process.env.PUBLIC_PATH || 'http://localhost:8003/';
+const PUBLIC_PATH = process.env.PUBLIC_PATH || 'http://localhost:8002/';
 
 module.exports = {
   output: {

@@ -57,11 +57,9 @@ module.exports = {
       filename: 'remoteEntry.js',
       remotes: {
         shell: 'shell',
-        jobs: 'jobs',
+        homepage: 'homepage',
       },
-      exposes: {
-        './Homepage': '../src/pages/index.tsx',
-      },
+      exposes: {},
       shared: {
         ...dependencies,
         react: {
